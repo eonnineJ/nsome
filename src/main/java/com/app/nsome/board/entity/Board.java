@@ -25,7 +25,7 @@ public class Board {
 
     String title;
 
-    String contant;
+    String contant; // 내용
 
     Integer hits; // 조회수
 
