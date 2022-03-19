@@ -29,8 +29,4 @@ public class Board {
 
     Integer hits;
 
-
-
-
-
 }
