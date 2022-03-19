@@ -23,7 +23,7 @@ public class Board {
 
     LocalDate writeDate;
 
-    String title;
+    String title; // 제목
 
     String contant; // 내용
 
