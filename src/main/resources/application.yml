@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:3306/postgres
+    username: nsome
+    password: nsome123qwe
+
+
+
+
