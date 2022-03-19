@@ -27,6 +27,8 @@ public class Board {
 
     String contant;
 
-    Integer hits;
+    Integer hits; // 조회수
+
+
 
 }
