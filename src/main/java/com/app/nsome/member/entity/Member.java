@@ -2,6 +2,7 @@ package com.app.nsome.member.entity;
 
 import com.app.nsome.International.entity.Nation;
 import com.app.nsome.common.entity.Image;
+import com.app.nsome.member.domain.GenderType;
 import com.app.nsome.member.domain.MemberType;
 import com.app.nsome.payment.entity.Payment;
 import lombok.Getter;
@@ -25,24 +26,20 @@ public class Member {
 
     private String phoneNumber;
 
-    private Character gender;
+    private GenderType gender;
+
+    private LocalDate nameLastChangeDate;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "nation_code")
     private Nation nation;
 
-    @ManyToMany
-    @JoinTable(name = "member_image"
-               , joinColumns = @JoinColumn(name = "photo_id")
-               , inverseJoinColumns = @JoinColumn(name = "image_id")
-    )
+    @OneToMany(mappedBy = "member_id")
     private Set<Image> photo = new HashSet<>();
 
     @OneToMany
     @JoinColumn(name = "payment_id")
     private Set<Payment> payment;
-
-    private LocalDate nameLastChangeDate;
 
     @Enumerated(EnumType.STRING)
     private MemberType type;
