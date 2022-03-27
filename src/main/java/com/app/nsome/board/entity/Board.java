@@ -14,9 +14,7 @@ public class Board {
     Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "id")
-    Member writerId;
-
+    @JoinColumn(name = "writer_id")
     Member writer;
 
     LocalDate writeDate;
