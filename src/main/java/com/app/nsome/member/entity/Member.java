@@ -25,7 +25,6 @@ public class Member {
 
     private String phoneNumber;
 
-
     private Character gender;
 
     @ManyToOne(fetch = FetchType.EAGER)
