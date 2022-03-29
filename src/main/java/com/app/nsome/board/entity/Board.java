@@ -25,4 +25,9 @@ public class Board {
 
     Integer hits; // 조회수
 
+
+
+
+
+
 }
