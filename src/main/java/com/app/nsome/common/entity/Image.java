@@ -17,12 +17,12 @@ import javax.persistence.Id;
 public class Image {
     @Id
     @GeneratedValue
-    Integer id;
+    private Integer id;
 
-    String location;
+    private String location;
 
-    String name;
+    private String name;
 
-    String size;
+    private String size;
 
 }

@@ -17,21 +17,21 @@ import java.time.LocalDate;
 public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
+    private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
-    Member writerId;
+    private Member writerId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "name")
-    Member writer;
+    @ManyToOne
+    @JoinColumn(name = "writer_id")
+    private Member writer;
 
-    LocalDate writeDate;
+    private LocalDate writeDate;
 
-    String title; // 제목
+    private String title; // 제목
 
-    String contant; // 내용
+    private String contant; // 내용
 
-    Integer hits; // 조회수
+    private Integer hits; // 조회수
 }

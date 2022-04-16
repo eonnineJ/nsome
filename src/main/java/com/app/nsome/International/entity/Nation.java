@@ -15,7 +15,7 @@ import javax.persistence.Id;
 @Getter
 public class Nation {
     @Id
-    String code;
+    private String code;
 
-    String name;
+    private String name;
 }
