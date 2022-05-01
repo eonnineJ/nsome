@@ -36,12 +36,12 @@ public class Member {
 
     private LocalDate nameLastChangeDate;
 
-    @ManyToMany
-    @JoinTable(name = "member_image"
-               , joinColumns = @JoinColumn(name = "photo_id")
-               , inverseJoinColumns = @JoinColumn(name = "image_id")
-    )
-    private Set<Image> photo = new HashSet<>();
+//    @ManyToMany
+//    @JoinTable(name = "member_image"
+//               , joinColumns = @JoinColumn(name = "photo_id")
+//               , inverseJoinColumns = @JoinColumn(name = "image_id")
+//    )
+//    private Set<Image> photo = new HashSet<>();
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "nation_code")
